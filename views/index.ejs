@@ -1,3 +1,6 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
 <div class='container'>
     <h5>Recipes</h5>
     <% if(recipes.length > 0) { %>
@@ -10,3 +13,5 @@
         <p>No recipes found</p>
     <% } %>
 </div>
+
+<%- include('partials/footer') %>
