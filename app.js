@@ -1,4 +1,8 @@
 const express = require('express');
+const ejs = require('ejs');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 // Initializing app as an express application
 const app = express();

@@ -1,3 +1,12 @@
 <div class='container'>
-    <h5>Hello World</h5>
+    <h5>Recipes</h5>
+    <% if(recipes.length > 0) { %>
+        <ul>
+            <% recipes.forEach((recipe) => { %>
+                <li><%= recipe.recipe.label %></li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No recipes found</p>
+    <% } %>
 </div>
