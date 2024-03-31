@@ -13,13 +13,13 @@
         </div>
         <div class='col-md-6 p-0'>
             <div class='card'>
-                <div class='card-header fw-bold'>Ingredients</div>
+                <div class='card-header fw-bold fs-4'><i class="fa-solid fa-pepper-hot"></i> Ingredients</div>
                 <div class='card-body'>
                     <p class='card-subtitle text-body-secondary fs-6'>Here is a list of all the ingredients you will need!</p>
                     <% if (recipe.ingredientLines.length > 0) { %>
                         <ul class='list-group list-group-flush'>
                             <% recipe.ingredientLines.forEach((ingredient) => { %>
-                                <li class="list-group-item"><%- ingredient %></li>
+                                <li class="list-group-item"><i class="fa-regular fa-square-check"></i> <%- ingredient %></li>
                             <% }); %>
                         </ul>
                     <% } %>
