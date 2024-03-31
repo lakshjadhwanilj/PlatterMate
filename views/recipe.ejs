@@ -1,9 +1,36 @@
 <%- include('partials/header') %>
 <%- include('partials/navbar') %>
 
-<div>
-    <h5><%= recipe.label %></h5>
-    <p><%= recipe.ingredients %></p>
+<div class='container'>
+    <div class='row text-center my-4'>
+        <h4 class='card-title'><%= recipe.label %></h4>
+    </div>
+    <div class='row'>
+        <div class='col-md-6'>
+            <div class='card-img d-flex justify-content-center'>
+                <img class='img-fluid rounded' src="<%= recipe.image %>" alt="<%= recipe.label %>">
+            </div>
+        </div>
+        <div class='col-md-6 p-0'>
+            <div class='card'>
+                <div class='card-header fw-bold'>Ingredients</div>
+                <div class='card-body'>
+                    <p class='card-subtitle text-body-secondary fs-6'>Here is a list of all the ingredients you will need!</p>
+                    <% if (recipe.ingredientLines.length > 0) { %>
+                        <ul class='list-group list-group-flush'>
+                            <% recipe.ingredientLines.forEach((ingredient) => { %>
+                                <li class="list-group-item"><%- ingredient %></li>
+                            <% }); %>
+                        </ul>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
+
 
 <%- include('partials/footer') %>
