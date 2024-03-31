@@ -19,5 +19,8 @@ app.use('/search', require('./routes/search'));
 app.use(express.static('public'));
 
 // Listening to port
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
+// Exporting the app for testing purposes
+module.exports = app;
