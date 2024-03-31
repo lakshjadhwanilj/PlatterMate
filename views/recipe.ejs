@@ -3,11 +3,11 @@
 
 <div class='container'>
     <div class='row text-center my-4'>
-        <h4 class='card-title'><%= recipe.label %></h4>
+        <h4 class='recipe-title'><%= recipe.label %></h4>
     </div>
     <div class='row'>
         <div class='col-md-6'>
-            <div class='card-img d-flex justify-content-center'>
+            <div class='recipe-img d-flex justify-content-center'>
                 <img class='img-fluid rounded' src="<%= recipe.image %>" alt="<%= recipe.label %>">
             </div>
         </div>
@@ -29,8 +29,5 @@
     </div>
 </div>
 
-
-
-
-
+<%- include('partials/footnote') %>
 <%- include('partials/footer') %>

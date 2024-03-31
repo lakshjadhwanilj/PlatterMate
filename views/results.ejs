@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<div class="container my-4 justify-content-center">
+    <div class="col-md-8">
+        <%- include('partials/searchBtn') %>
+    </div>
+</div>
+
+<div class='container'>
+    <h5 class='mb-4'>Below are the search results...</h5>
+    <% if(recipes.length > 0) { %>
+        <div class='row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 d-flex justify-content-between'>
+            <% recipes.forEach((recipe) => { %>
+                <div class="col d-flex justify-content-center">
+                    <%- include('partials/card', { recipe }) %>
+                </div>
+            <% }); %>
+        </div>
+    <% } else { %>
+        <p>No recipes found</p>
+    <% } %>
+</div>
+
+<%- include('partials/footnote') %>
+<%- include('partials/footer') %>
