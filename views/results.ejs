@@ -17,6 +17,16 @@
                 </div>
             <% }); %>
         </div>
+        <div class='mt-4'>
+            <ul class='pagination justify-content-center'>
+                <li class='page-item <%= !recipes.prev && "disabled" %>'>
+                    <a href='<%= recipes.prev ? `/search?query=${query}&page=${recipes.prev.page}` : "#" %>' class="page-link">Previous</a>
+                </li>
+                <li class='page-item <%= !recipes.next && "disabled" %>'>
+                    <a href='<%= recipes.next ? `/search?query=${query}&page=${recipes.next.page}` : "#" %>' class="page-link">Next</a>
+                </li>
+            </ul>
+        </div>
     <% } else { %>
         <p>No recipes found</p>
     <% } %>
