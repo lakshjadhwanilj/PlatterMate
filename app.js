@@ -12,6 +12,7 @@ app.set('view engine', 'ejs');
 
 // Using routes
 app.use('/', require('./routes/index'));
+app.use('/recipes', require('./routes/recipes'));
 
 // Initializing static files
 app.use(express.static('public'));

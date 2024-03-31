@@ -13,10 +13,32 @@ const getRecipes = async (query) => {
 				app_key: API_KEY,
 			},
 		});
+		console.log('Data fetched from Edamam api.');
 		return response.data.hits;
 	} catch (error) {
 		console.error(`Error fetching data from Edamam api: ${error}`);
 	}
 };
 
-module.exports = getRecipes;
+const getRecipeDetails = async (id) => {
+	try {
+		const response = await axios.get(
+			`https://api.edamam.com/api/recipes/v2/${id}`,
+			{
+				params: {
+					type: 'public',
+					id: id,
+					app_id: API_ID,
+					app_key: API_KEY,
+				},
+			}
+		);
+		console.log('Data fetched from Edamam api.');
+		console.log(response.data);
+		return response.data;
+	} catch (error) {
+		console.error(`Error fetching data from Edamam api: ${error}`);
+	}
+};
+
+module.exports = { getRecipes, getRecipeDetails };
