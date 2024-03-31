@@ -34,7 +34,6 @@ const getRecipeDetails = async (id) => {
 			}
 		);
 		console.log('Data fetched from Edamam api.');
-		console.log(response.data);
 		return response.data;
 	} catch (error) {
 		console.error(`Error fetching data from Edamam api: ${error}`);

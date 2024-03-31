@@ -8,7 +8,6 @@ const { getRecipeDetails } = require('../api/edamam');
 router.get('/:id', async (req, res) => {
 	try {
 		const recipe = await getRecipeDetails(req.params.id);
-		// console.log(recipe.recipe.ingredients);
 		res.render('recipe', { recipe: recipe.recipe, title: recipe.recipe.label });
 	} catch (error) {
 		console.error(`Error fetching data from Edamam api: ${error}`);
