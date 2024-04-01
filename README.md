@@ -7,7 +7,7 @@ PlatterMate is a simple web-app for discovering new global recipes.
 Before you begin, ensure you have met the following requirements:
 
 - Node.js and npm installed.
-- An API key for Edamam API.
+- An API key for [Edamam API](https://developer.edamam.com/edamam-docs-recipe-api, 'Edamam API').
 
 ## Installation
 
